@@ -1,43 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Clean Blog</title>
-
-    <!-- Bootstrap Core CSS -->
+    <title>Quick Book Demo</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	
-
+	<!-- 
+		BOUNCY CASTLE NETWORK 'QUICK BOOK' INTEGRATION DEMO
+		
+		There are only two steps to get the Bouncy Castle Network 'Quick Book' integration working with your site.
+		They are marked by comments, further down this page. Step 1 is towards the bottom, and Step 2 is about half way down.
+		You will have to let us know the precise domain names you plan to integrate the booking system into.
+	-->
 </head>
-
 <body>
-
-    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container-fluid">>
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -45,33 +28,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html">Navigation</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Sample Post</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
         <div class="container">
             <div class="row">
@@ -85,11 +52,21 @@
             </div>
         </div>
     </header>
-
-    <!-- Main Content -->
     <div class="container">
 			<div style="max-width:650px;margin:20px auto;border-radius:10px;">
-				<a href="#" data-href="https://kevin.bouncycastlenetwork.co.uk/booking-responsive.aspx?id=2" data-target="TargetID" class="btn btn-success" style="margin:0 auto;display:block;width:400px;">Click Here to Book Online</a>
+				<!--
+					STEP 2:
+					
+					Create 'Book Online' links to your products. Set the 'href' attribute to '#', and add a new
+					'data-href' attribute pointing to the link provided on each product on the admin system of your
+					BCN site. This will ensure the link does not 'work' before the script in the footer has loaded,
+					and prevents the booking form from loading in a page by itself.
+					
+					By default the booking form will pop up immediately below the link. If you wish to change this,
+					you can create a div with ID 'QuickBookContainer', and the booking form will be inserted there
+					instead, like in the example below
+				-->
+				<a href="#" data-href="https://kevin.bouncycastlenetwork.co.uk/booking-responsive.aspx?id=2" class="btn btn-success" style="margin:0 auto;display:block;width:400px;">Click Here to Book Online</a>
 			</div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -139,7 +116,6 @@
                     <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
                 </div>
                 <hr>
-                <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
                         <a href="#">Older Posts &rarr;</a>
@@ -148,10 +124,7 @@
             </div>
         </div>
     </div>
-
     <hr>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
@@ -182,21 +155,19 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="copyright text-muted">Copyright &copy; Your Website</p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
-    <script src="quick-book.min.js"></script>
+	<!--
+		STEP 1:
+		
+		Link the following Javascript file before your closing </body> tags on your site's overall template
+	-->
+    <script src="https://www.bouncycastlenetwork.com/quick-book.js"></script>
 </body>
-
 </html>
